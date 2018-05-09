@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using WCFServiceOuiChat;
 using System.ServiceModel.Description;
+using System.Net;
+using System.Net.Sockets;
 
 namespace WebServiceLauncher
 {
@@ -13,22 +15,24 @@ namespace WebServiceLauncher
     {
         static void Main(string[] args)
         {
-            Uri baseAdress = new Uri("https://localhost:8000/WeChat");
+            // open port : netsh http add urlacl url=http://+:9997/ user=%USERDOMAIN%\%USERNAME%
+            Uri baseAdress = new Uri("http://localhost:9997/OuiChatWCF");
             
-            ServiceHost selfHost = new ServiceHost(typeof(WeChatService)); ;
+            ServiceHost selfHost = new ServiceHost(typeof(OuiChatService)); ;
 
             try
             {
-                selfHost.AddServiceEndpoint(typeof(IService), new WSHttpBinding(), "WCFServiceWeChat");
+                selfHost.AddServiceEndpoint(typeof(IService), new WSHttpBinding(), baseAdress.OriginalString);
 
                 ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
-                smb.HttpGetEnabled = true;
+                smb.HttpGetEnabled = false;
                 selfHost.Description.Behaviors.Add(smb);
 
                 selfHost.Open();
 
-                Console.WriteLine("WeChat web service open");
-
+                Console.WriteLine("OuiChat web service open");
+                Console.WriteLine("Marchine IP : " + GetLocalIPAddress());
+                Console.WriteLine("Server URL : " + baseAdress.OriginalString.Replace("localhost", GetLocalIPAddress()));
 
 
             }
@@ -38,6 +42,21 @@ namespace WebServiceLauncher
                 selfHost.Abort();
             }
 
+            string endstr = "";
+            while( (endstr = Console.ReadLine()) != "close");
+        }
+
+        public static string GetLocalIPAddress()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            throw new Exception("No network adapters with an IPv4 address in the system!");
         }
     }
 }

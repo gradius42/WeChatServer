@@ -1,0 +1,11 @@
+D:\User\Document\Visual Studio 2015\Projects\WcfService1\WebServiceLauncher\obj\Debug\WebServiceLauncher.csprojResolveAssemblyReference.cache
+D:\User\Document\Visual Studio 2015\Projects\WcfService1\WebServiceLauncher\obj\Debug\WebServiceLauncher.csproj.CoreCompileInputs.cache
+D:\User\Document\Visual Studio 2015\Projects\WcfService1\WebServiceLauncher\bin\Debug\ApplicationInsights.config
+D:\User\Document\Visual Studio 2015\Projects\WcfService1\WebServiceLauncher\bin\Debug\WebServiceLauncher.exe.config
+D:\User\Document\Visual Studio 2015\Projects\WcfService1\WebServiceLauncher\bin\Debug\WebServiceLauncher.exe
+D:\User\Document\Visual Studio 2015\Projects\WcfService1\WebServiceLauncher\bin\Debug\WebServiceLauncher.pdb
+D:\User\Document\Visual Studio 2015\Projects\WcfService1\WebServiceLauncher\bin\Debug\WcfService1.dll
+D:\User\Document\Visual Studio 2015\Projects\WcfService1\WebServiceLauncher\bin\Debug\WcfService1.pdb
+D:\User\Document\Visual Studio 2015\Projects\WcfService1\WebServiceLauncher\bin\Debug\WcfService1.dll.config
+D:\User\Document\Visual Studio 2015\Projects\WcfService1\WebServiceLauncher\obj\Debug\WebServiceLauncher.exe
+D:\User\Document\Visual Studio 2015\Projects\WcfService1\WebServiceLauncher\obj\Debug\WebServiceLauncher.pdb

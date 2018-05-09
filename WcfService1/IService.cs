@@ -14,13 +14,7 @@ namespace WCFServiceOuiChat
     {
         [OperationContract]
         string GetHello();
-
-        [OperationContract]
-
-
-
-
-
+        
         [OperationContract]
         string GetData(int value);
         
