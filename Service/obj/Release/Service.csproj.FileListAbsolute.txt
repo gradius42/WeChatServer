@@ -1,0 +1,4 @@
+C:\Users\n.verlet\Documents\Visual Studio 2015\Projects\testWCF\Service\bin\Release\Service.dll
+C:\Users\n.verlet\Documents\Visual Studio 2015\Projects\testWCF\Service\bin\Release\Service.pdb
+C:\Users\n.verlet\Documents\Visual Studio 2015\Projects\testWCF\Service\obj\Release\Service.dll
+C:\Users\n.verlet\Documents\Visual Studio 2015\Projects\testWCF\Service\obj\Release\Service.pdb

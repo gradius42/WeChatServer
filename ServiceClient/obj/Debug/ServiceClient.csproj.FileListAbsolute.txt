@@ -1,0 +1,1 @@
+C:\Users\n.verlet\Documents\Visual Studio 2015\Projects\testWCF\ServiceClient\bin\Debug\ServiceClient.exe.config

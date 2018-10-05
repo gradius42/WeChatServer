@@ -1,0 +1,6 @@
+C:\Users\n.verlet\Documents\Visual Studio 2015\Projects\testWCF\Client\bin\Debug\Client.exe.config
+C:\Users\n.verlet\Documents\Visual Studio 2015\Projects\testWCF\Client\bin\Debug\Client.exe
+C:\Users\n.verlet\Documents\Visual Studio 2015\Projects\testWCF\Client\bin\Debug\Client.pdb
+C:\Users\n.verlet\Documents\Visual Studio 2015\Projects\testWCF\Client\obj\Debug\Client.exe
+C:\Users\n.verlet\Documents\Visual Studio 2015\Projects\testWCF\Client\obj\Debug\Client.pdb
+C:\Users\n.verlet\Documents\Visual Studio 2015\Projects\testWCF\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
