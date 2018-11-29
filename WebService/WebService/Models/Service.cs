@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using SncfRequest;
 
 namespace WebService
 {
@@ -29,12 +31,21 @@ namespace WebService
             return test;
         }
 
-        public Task<HttpResponseMessage> GetCities()
+        public List<StationContentData> GetTrainStation(string name)
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri(databaseURL);
+            List<MyStationContent> stationContent = SncfRequest.SncfRequestTrainInfos.getTrainLineId(name);
 
-            return client.GetAsync("api/Cities");
+            List<StationContentData> res = new List<StationContentData>();
+
+            foreach(MyStationContent s in stationContent)
+            {
+                StationContentData data = new StationContentData();
+                data.Id = s.id;
+                data.Name = s.name;
+                res.Add(data);
+            }
+
+            return res;
         }
     }
 }

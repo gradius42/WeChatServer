@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using WebService;
 
 namespace WebClient
 {
@@ -7,18 +9,19 @@ namespace WebClient
         static void Main(string[] args)
         {
             string val;
-            WebService.Service test = new WebService.Service();
+            WebService.Service service = new WebService.Service();
 
-            Console.WriteLine(test.GetMessage("Niko"));
-
-            Console.WriteLine(test.GetResultOfAddition(1, 2));
-            val = Console.ReadLine();
-            test.SetTest(int.Parse(val));
-            Console.WriteLine(test.GetTest());
-
+            Console.WriteLine("GetTrainStation(strasbourg)");
             Console.ReadKey();
 
-            Console.WriteLine(test.GetCities());
+            List<StationContentData> res = service.GetTrainStation("strasbourg");
+
+            foreach(StationContentData s in res)
+            {
+                Console.WriteLine("ID : " + s.Id + " ; Name : " + s.Name);
+            }
+
+
             Console.ReadKey();
         }
     }
